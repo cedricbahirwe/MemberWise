@@ -13,6 +13,8 @@
 		8206F38126DE8C9A00034152 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8206F38026DE8C9A00034152 /* Preview Assets.xcassets */; };
 		8206F38C26DE8C9A00034152 /* MemeberWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F38B26DE8C9A00034152 /* MemeberWiseTests.swift */; };
 		8206F39726DE8C9A00034152 /* MemeberWiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F39626DE8C9A00034152 /* MemeberWiseUITests.swift */; };
+		8206F3A526DF404100034152 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F3A426DF404100034152 /* CardView.swift */; };
+		8206F3A826DF40C400034152 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F3A726DF40C400034152 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		8206F39226DE8C9A00034152 /* MemeberWiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeberWiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8206F39626DE8C9A00034152 /* MemeberWiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeberWiseUITests.swift; sourceTree = "<group>"; };
 		8206F39826DE8C9A00034152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8206F3A426DF404100034152 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8206F3A726DF40C400034152 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				8206F37926DE8C9900034152 /* MemeberWiseApp.swift */,
 				8206F37B26DE8C9900034152 /* ContentView.swift */,
+				8206F3A426DF404100034152 /* CardView.swift */,
+				8206F3A626DF40BA00034152 /* Extensions */,
 				8206F37D26DE8C9A00034152 /* Assets.xcassets */,
 				8206F38226DE8C9A00034152 /* Info.plist */,
 				8206F37F26DE8C9A00034152 /* Preview Content */,
@@ -128,6 +134,14 @@
 				8206F39826DE8C9A00034152 /* Info.plist */,
 			);
 			path = MemeberWiseUITests;
+			sourceTree = "<group>";
+		};
+		8206F3A626DF40BA00034152 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8206F3A726DF40C400034152 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8206F37C26DE8C9900034152 /* ContentView.swift in Sources */,
+				8206F3A526DF404100034152 /* CardView.swift in Sources */,
+				8206F3A826DF40C400034152 /* View+Extensions.swift in Sources */,
 				8206F37A26DE8C9900034152 /* MemeberWiseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

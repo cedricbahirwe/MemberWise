@@ -16,16 +16,15 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("MemeberWise")
-                .font(.largeTitle)
+                .font(.largeTitle.bold())
             
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
                     ForEach(emojis[0..<emojiCount], id:\.self) { emoji in
-                        CardView(label: emoji)
+                        CardView(emoji)
                             .aspectRatio(2/3,contentMode: .fit)
                     }
                 }
-                .foregroundColor(.primary)
             }
 
             Spacer()
@@ -72,33 +71,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct CardView: View {
-    let label: String
-    @State var isFaceUp = true
-    
-    private var rectangleShape: RoundedRectangle {
-        RoundedRectangle(cornerRadius: 20)
-    }
-    var body: some View {
-        ZStack {
-            if isFaceUp {
-                rectangleShape
-                    .fill()
-                    .foregroundColor(Color(.systemBackground))
-                rectangleShape
-                    .strokeBorder(lineWidth: 3)
-                
-                Text(label)
-                    .font(.largeTitle)
-            } else {
-                rectangleShape.opacity(0.9)
-            }
-        }
-        .onTapGesture {
-            let generator = UISelectionFeedbackGenerator()
-            generator.selectionChanged()
-            isFaceUp.toggle()
-        }
-        
-    }
-}
