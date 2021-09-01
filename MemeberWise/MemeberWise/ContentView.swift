@@ -11,14 +11,24 @@ struct ContentView: View {
     @State private var emojis = ["🚂", "🚀", "🚁", "🚜", "🛺", "🚲", "🚐", "🛵", "🚘", "🛻", "🏎️", "🚙"]
     
     @State private var emojiCount = 4
+    
+    private var columns =  Array(repeating: GridItem(), count:4)
     var body: some View {
         VStack {
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 4)) {
-                ForEach(emojis[0..<emojiCount], id:\.self) { emoji in
-                    CardView(label: emoji)
-                        .frame(minHeight: .infinity)
+            Text("MemeberWise")
+                .font(.largeTitle)
+            
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                    ForEach(emojis[0..<emojiCount], id:\.self) { emoji in
+                        CardView(label: emoji)
+                            .aspectRatio(2/3,contentMode: .fit)
+                    }
                 }
+                .foregroundColor(.primary)
             }
+
+            Spacer()
             HStack {
                 Button(action: {
                     withAnimation(.spring()) {
@@ -51,7 +61,6 @@ struct ContentView: View {
             .padding(.horizontal)
         }
         .padding(.horizontal)
-        .foregroundColor(.primary)
         
     }
 }
@@ -77,7 +86,7 @@ struct CardView: View {
                     .fill()
                     .foregroundColor(Color(.systemBackground))
                 rectangleShape
-                    .stroke(lineWidth: 3)
+                    .strokeBorder(lineWidth: 3)
                 
                 Text(label)
                     .font(.largeTitle)
