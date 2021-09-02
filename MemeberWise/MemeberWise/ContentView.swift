@@ -13,9 +13,9 @@ struct ContentView: View {
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
     var body: some View {
-        VStack {
-            Text("MemeberWise")
-                .font(.largeTitle.bold())
+        VStack(spacing: 0) {
+            Text("MemberWise")
+                .font(.proxima(.black, 40))
             
             ScrollView {
                 LazyVGrid(columns: columns) {

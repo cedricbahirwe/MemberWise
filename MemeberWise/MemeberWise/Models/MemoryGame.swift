@@ -11,9 +11,7 @@ struct MemoryGame<CardContent> {
     var cards: [Card]
     
     
-    func choose(card: Card) {
-        
-    }
+    func choose(card: Card) {}
     
     struct Card {
         var isFaceUp: Bool
