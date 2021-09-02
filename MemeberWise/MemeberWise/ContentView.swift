@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var emojis = ["🚂", "🚀", "🚁", "🚜", "🛺", "🚲", "🚐", "🛵", "🚘", "🛻", "🏎️", "🚙"]
+
+    @State private var gameStore = EmojiMemoryGame()
     @State private var emojiCount = 4
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
@@ -19,8 +20,8 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(emojis[0..<emojiCount], id:\.self) { emoji in
-                        CardView(emoji)
+                    ForEach(gameStore.cards, id:\.self) { card in
+                        CardView(card)
                             .aspectRatio(2/3,contentMode: .fit)
                     }
                 }
@@ -32,7 +33,7 @@ struct ContentView: View {
                 Spacer()
                 Button("Shuffle") {
                     withAnimation {
-                        emojis.shuffle()
+//                        gameStore.cards
                     }
                 }
                 .font(.system(.title, design: .monospaced))
@@ -49,7 +50,7 @@ struct ContentView: View {
     private var removeButton: some View {
         Button(action: {
             withAnimation(.spring()) {
-                if emojiCount < emojis.count {
+                if emojiCount < gameStore.cards.count {
                     emojiCount += 1
                 }
             }

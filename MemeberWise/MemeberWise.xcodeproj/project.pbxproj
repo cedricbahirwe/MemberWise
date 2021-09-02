@@ -27,6 +27,7 @@
 		82EC5A7026E0B64600312DD6 /* ProximaNova-Alt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A6726E0B64600312DD6 /* ProximaNova-Alt-Bold.otf */; };
 		82EC5A7126E0B64600312DD6 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A6826E0B64600312DD6 /* ProximaNova-Semibold.otf */; };
 		82EC5A7326E0B6F400312DD6 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A7226E0B6F400312DD6 /* Proxima Nova Black.otf */; };
+		82EC5A7826E0BA5700312DD6 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC5A7726E0BA5700312DD6 /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		82EC5A6726E0B64600312DD6 /* ProximaNova-Alt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Alt-Bold.otf"; sourceTree = "<group>"; };
 		82EC5A6826E0B64600312DD6 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		82EC5A7226E0B6F400312DD6 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		82EC5A7726E0BA5700312DD6 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				8206F37B26DE8C9900034152 /* ContentView.swift */,
 				8206F3A426DF404100034152 /* CardView.swift */,
 				82EC5A5E26E0B51000312DD6 /* TestingView.swift */,
+				82EC5A7426E0BA3400312DD6 /* ViewModels */,
 				82EC5A2926E0B0B700312DD6 /* Models */,
 				82EC5A2826E0B0B200312DD6 /* Views */,
 				8206F3A626DF40BA00034152 /* Extensions */,
@@ -202,6 +205,14 @@
 				82EC5A5A26E0B44F00312DD6 /* CustomFonts.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		82EC5A7426E0BA3400312DD6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				82EC5A7726E0BA5700312DD6 /* EmojiMemoryGame.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 			files = (
 				8206F37C26DE8C9900034152 /* ContentView.swift in Sources */,
 				8206F3A526DF404100034152 /* CardView.swift in Sources */,
+				82EC5A7826E0BA5700312DD6 /* EmojiMemoryGame.swift in Sources */,
 				82EC5A2B26E0B0C700312DD6 /* MemoryGame.swift in Sources */,
 				82EC5A5B26E0B45000312DD6 /* CustomFonts.swift in Sources */,
 				8206F3A826DF40C400034152 /* View+Extensions.swift in Sources */,
