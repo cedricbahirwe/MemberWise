@@ -16,10 +16,20 @@ class EmojiMemoryGame: ObservableObject {
         MemoryGame(numberOfPairsOfCards: 4) { emojis[$0] }
     }
     
-    private var model: MemoryGame<String> = createMemoryGame()
+    @Published private var model: MemoryGame<String> = createMemoryGame()
     
     var cards: [MemoryGame<String>.Card] {
         model.cards
+    } 
+    
+    
+   // MARK: - User Intents
+    
+    func choose(_ card: MemoryGame<String>.Card) {
+        model.choose(card: card)
     }
     
+    func shuffleCards() {
+        model.shuffleCards()
+    }
 }

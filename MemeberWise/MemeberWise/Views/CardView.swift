@@ -8,44 +8,37 @@
 import SwiftUI
 
 struct CardView: View {
-    internal init(_ label: String) {
-        self.title = label
+    init(for card: MemoryGame<String>.Card) {
+        self.card = card
     }
     
-    let title: String
-    @State var isFaceUp = true
+    let card: MemoryGame<String>.Card
     
     private var rectangleShape: RoundedRectangle {
         RoundedRectangle(cornerRadius: 20)
     }
     var body: some View {
         ZStack {
-            if isFaceUp {
+            if card.isFaceUp {
                 rectangleShape
                     .fill()
                     .foregroundColor(Color(.systemBackground))
                 rectangleShape
                     .strokeBorder(lineWidth: 3)
                 
-                Text(title)
+                Text(card.content)
                     .font(.largeTitle)
             } else {
                 rectangleShape.opacity(0.9)
             }
         }
-        .onTapGesture {
-            let generator = UISelectionFeedbackGenerator()
-            generator.selectionChanged()
-            isFaceUp.toggle()
-        }
-        
     }
 }
 
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView("🥮")
+        CardView(for: .init(content: "🥮", id: 1))
             .padding(10)
             .previewSize(width: 100, height: 150)
     }
