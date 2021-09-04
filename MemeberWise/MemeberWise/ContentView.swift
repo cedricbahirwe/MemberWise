@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var gameStore = EmojiMemoryGame()
+    @ObservedObject var  gameViewModel: EmojiMemoryGame
     @State private var emojiCount = 4
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
@@ -20,9 +20,13 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(gameStore.cards, id:\.self) { card in
-                        CardView(card)
+                    ForEach(gameViewModel.cards) { card in
+                        CardView(for: card)
                             .aspectRatio(2/3,contentMode: .fit)
+                            .onTapGesture {
+                                makeSelectionSound()
+                                gameViewModel.choose(card)
+                            }
                     }
                 }
             }
@@ -50,7 +54,7 @@ struct ContentView: View {
     private var removeButton: some View {
         Button(action: {
             withAnimation(.spring()) {
-                if emojiCount < gameStore.cards.count {
+                if emojiCount < gameViewModel.cards.count {
                     emojiCount += 1
                 }
             }
@@ -70,11 +74,17 @@ struct ContentView: View {
             Image(systemName: "minus.circle")
         })
     }
+    
+    private func makeSelectionSound() {
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = EmojiMemoryGame()
+        ContentView(gameViewModel: game)
             .preferredColorScheme(.dark)
     }
 }

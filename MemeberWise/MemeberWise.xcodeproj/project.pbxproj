@@ -127,7 +127,6 @@
 			children = (
 				8206F37926DE8C9900034152 /* MemeberWiseApp.swift */,
 				8206F37B26DE8C9900034152 /* ContentView.swift */,
-				8206F3A426DF404100034152 /* CardView.swift */,
 				82EC5A5E26E0B51000312DD6 /* TestingView.swift */,
 				82EC5A7426E0BA3400312DD6 /* ViewModels */,
 				82EC5A2926E0B0B700312DD6 /* Models */,
@@ -178,6 +177,7 @@
 		82EC5A2826E0B0B200312DD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8206F3A426DF404100034152 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
