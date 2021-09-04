@@ -14,7 +14,7 @@ struct ContentView: View {
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
             Text("MemberWise")
                 .font(.proxima(.black, 40))
             
