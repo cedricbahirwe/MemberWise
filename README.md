@@ -8,4 +8,4 @@ A card-matching game made during my exploration of SwiftUI power-ups
 - **Mastering of SwiftUI Layout Engine**
 ## Special Thanks to:
 
-1. Paul Heagarty from Standford University for his great course ✨.
+1. Paul Hegarty from Standford University for his great course ✨.
