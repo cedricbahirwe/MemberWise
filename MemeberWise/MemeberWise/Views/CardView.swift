@@ -31,7 +31,7 @@ struct CardView: View {
             } else {
                 rectangleShape.opacity(0.9)
             }
-        }
+        }t
     }
 }
 
