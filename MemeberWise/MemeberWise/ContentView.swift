@@ -37,7 +37,7 @@ struct ContentView: View {
                 Spacer()
                 Button("Shuffle") {
                     withAnimation {
-//                        gameStore.cards
+                        gameViewModel.shuffleCards()
                     }
                 }
                 .font(.system(.title, design: .monospaced))

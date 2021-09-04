@@ -24,16 +24,17 @@ struct MemoryGame<CardContent> {
         }
     }
     
+    
+    /// Choose a selected card
+    /// - Parameter card: the selected card from the stack
     mutating func choose(card: Card) {
-        let chosenIndex = index(of: card)
-        cards[chosenIndex].isFaceUp.toggle()
+        if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+            cards[chosenIndex].isFaceUp.toggle()
+        }
     }
     
-    private func index(of card: Card) -> Int{
-        if let index = cards.firstIndex(where: { $0.id == card.id }) {
-            return index
-        }
-        return 0 // Index out of bounds
+    mutating func shuffleCards() {
+        cards.shuffle()
     }
     
     struct Card: Identifiable {
