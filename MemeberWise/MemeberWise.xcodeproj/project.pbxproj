@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8206F37A26DE8C9900034152 /* MemeberWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F37926DE8C9900034152 /* MemeberWiseApp.swift */; };
-		8206F37C26DE8C9900034152 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F37B26DE8C9900034152 /* ContentView.swift */; };
 		8206F37E26DE8C9A00034152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8206F37D26DE8C9A00034152 /* Assets.xcassets */; };
 		8206F38126DE8C9A00034152 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8206F38026DE8C9A00034152 /* Preview Assets.xcassets */; };
 		8206F38C26DE8C9A00034152 /* MemeberWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F38B26DE8C9A00034152 /* MemeberWiseTests.swift */; };
 		8206F39726DE8C9A00034152 /* MemeberWiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F39626DE8C9A00034152 /* MemeberWiseUITests.swift */; };
 		8206F3A526DF404100034152 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F3A426DF404100034152 /* CardView.swift */; };
 		8206F3A826DF40C400034152 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206F3A726DF40C400034152 /* View+Extensions.swift */; };
+		824B3D5126E66963000EE3AE /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B3D5026E66963000EE3AE /* EmojiMemoryGameView.swift */; };
 		82EC5A2B26E0B0C700312DD6 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC5A2A26E0B0C700312DD6 /* MemoryGame.swift */; };
 		82EC5A5B26E0B45000312DD6 /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC5A5A26E0B44F00312DD6 /* CustomFonts.swift */; };
-		82EC5A5F26E0B51000312DD6 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC5A5E26E0B51000312DD6 /* TestingView.swift */; };
 		82EC5A6926E0B64600312DD6 /* ProximaNova-Alt-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A6026E0B64600312DD6 /* ProximaNova-Alt-Light.otf */; };
 		82EC5A6A26E0B64600312DD6 /* ProximaNova-Alt-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A6126E0B64600312DD6 /* ProximaNova-Alt-Thin.otf */; };
 		82EC5A6B26E0B64600312DD6 /* ProximaNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82EC5A6226E0B64600312DD6 /* ProximaNova-Thin.otf */; };
@@ -50,7 +49,6 @@
 /* Begin PBXFileReference section */
 		8206F37626DE8C9900034152 /* MemeberWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeberWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8206F37926DE8C9900034152 /* MemeberWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeberWiseApp.swift; sourceTree = "<group>"; };
-		8206F37B26DE8C9900034152 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8206F37D26DE8C9A00034152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8206F38026DE8C9A00034152 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8206F38226DE8C9A00034152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,9 +60,9 @@
 		8206F39826DE8C9A00034152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8206F3A426DF404100034152 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8206F3A726DF40C400034152 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		824B3D5026E66963000EE3AE /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		82EC5A2A26E0B0C700312DD6 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		82EC5A5A26E0B44F00312DD6 /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
-		82EC5A5E26E0B51000312DD6 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		82EC5A6026E0B64600312DD6 /* ProximaNova-Alt-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Alt-Light.otf"; sourceTree = "<group>"; };
 		82EC5A6126E0B64600312DD6 /* ProximaNova-Alt-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Alt-Thin.otf"; sourceTree = "<group>"; };
 		82EC5A6226E0B64600312DD6 /* ProximaNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Thin.otf"; sourceTree = "<group>"; };
@@ -126,8 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8206F37926DE8C9900034152 /* MemeberWiseApp.swift */,
-				8206F37B26DE8C9900034152 /* ContentView.swift */,
-				82EC5A5E26E0B51000312DD6 /* TestingView.swift */,
+				824B3D5026E66963000EE3AE /* EmojiMemoryGameView.swift */,
 				82EC5A7426E0BA3400312DD6 /* ViewModels */,
 				82EC5A2926E0B0B700312DD6 /* Models */,
 				82EC5A2826E0B0B200312DD6 /* Views */,
@@ -353,14 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8206F37C26DE8C9900034152 /* ContentView.swift in Sources */,
 				8206F3A526DF404100034152 /* CardView.swift in Sources */,
 				82EC5A7826E0BA5700312DD6 /* EmojiMemoryGame.swift in Sources */,
 				82EC5A2B26E0B0C700312DD6 /* MemoryGame.swift in Sources */,
 				82EC5A5B26E0B45000312DD6 /* CustomFonts.swift in Sources */,
+				824B3D5126E66963000EE3AE /* EmojiMemoryGameView.swift in Sources */,
 				8206F3A826DF40C400034152 /* View+Extensions.swift in Sources */,
 				8206F37A26DE8C9900034152 /* MemeberWiseApp.swift in Sources */,
-				82EC5A5F26E0B51000312DD6 /* TestingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
