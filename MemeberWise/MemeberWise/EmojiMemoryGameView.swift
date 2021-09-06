@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmojiMemoryGameView: View {
     
-    @ObservedObject var  gameViewModel: EmojiMemoryGame
+    @ObservedObject var  gameViewModel:  EmojiMemoryGame
     @State private var emojiCount = 4
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
