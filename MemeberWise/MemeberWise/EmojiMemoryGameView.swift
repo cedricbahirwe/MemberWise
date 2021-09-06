@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmojiMemoryGameView: View {
     
-    @ObservedObject var  gameViewModel:  EmojiMemoryGame
+    @ObservedObject var game: EmojiMemoryGame
     @State private var emojiCount = 4
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
@@ -20,12 +20,12 @@ struct EmojiMemoryGameView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(gameViewModel.cards) { card in
+                    ForEach(game.cards) { card in
                         CardView(for: card)
                             .aspectRatio(2/3,contentMode: .fit)
                             .onTapGesture {
                                 makeSelectionSound()
-                                gameViewModel.choose(card)
+                                game.choose(card)
                             }
                     }
                 }
@@ -37,7 +37,7 @@ struct EmojiMemoryGameView: View {
                 Spacer()
                 Button("Shuffle") {
                     withAnimation {
-                        gameViewModel.shuffleCards()
+                        game.shuffleCards()
                     }
                 }
                 .font(.system(.title, design: .monospaced))
@@ -54,7 +54,7 @@ struct EmojiMemoryGameView: View {
     private var removeButton: some View {
         Button(action: {
             withAnimation(.spring()) {
-                if emojiCount < gameViewModel.cards.count {
+                if emojiCount < game.cards.count {
                     emojiCount += 1
                 }
             }
@@ -85,7 +85,7 @@ struct EmojiMemoryGameView: View {
 struct EmojiMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGame()
-        EmojiMemoryGameView(gameViewModel: game)
+        EmojiMemoryGameView(game: game)
             .preferredColorScheme(.dark)
         
     }

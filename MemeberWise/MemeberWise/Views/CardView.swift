@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CardView: View {
-    init(for card: MemoryGame<String>.Card) {
+    init(for card: EmojiMemoryGame.Card) {
         self.card = card
     }
     
-    let card: MemoryGame<String>.Card
+    let card: EmojiMemoryGame.Card
     
     private var rectangleShape: RoundedRectangle {
         RoundedRectangle(cornerRadius: 20)
