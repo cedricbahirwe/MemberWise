@@ -1,15 +1,15 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  MemeberWise
 //
-//  Created by Cédric Bahirwe on 31/08/2021.
+//  Created by Cédric Bahirwe on 06/09/2021.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-
-    @ObservedObject var  gameViewModel: EmojiMemoryGame
+struct EmojiMemoryGameView: View {
+    
+    @ObservedObject var game: EmojiMemoryGame
     @State private var emojiCount = 4
     
     private let columns =  [GridItem(.adaptive(minimum: 70))]
@@ -20,24 +20,24 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(gameViewModel.cards) { card in
+                    ForEach(game.cards) { card in
                         CardView(for: card)
                             .aspectRatio(2/3,contentMode: .fit)
                             .onTapGesture {
                                 makeSelectionSound()
-                                gameViewModel.choose(card)
+                                game.choose(card)
                             }
                     }
                 }
             }
-
+            
             Spacer()
             HStack {
                 removeButton
                 Spacer()
                 Button("Shuffle") {
                     withAnimation {
-                        gameViewModel.shuffleCards()
+                        game.shuffleCards()
                     }
                 }
                 .font(.system(.title, design: .monospaced))
@@ -54,7 +54,7 @@ struct ContentView: View {
     private var removeButton: some View {
         Button(action: {
             withAnimation(.spring()) {
-                if emojiCount < gameViewModel.cards.count {
+                if emojiCount < game.cards.count {
                     emojiCount += 1
                 }
             }
@@ -81,11 +81,12 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+struct EmojiMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGame()
-        ContentView(gameViewModel: game)
+        EmojiMemoryGameView(game: game)
             .preferredColorScheme(.dark)
+        
     }
 }
-

@@ -13,7 +13,7 @@ struct MemeberWiseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(gameViewModel: game)
+            EmojiMemoryGameView(game: game)
         }
     }
 }
