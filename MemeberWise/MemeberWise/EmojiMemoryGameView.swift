@@ -1,14 +1,14 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  MemeberWise
 //
-//  Created by Cédric Bahirwe on 31/08/2021.
+//  Created by Cédric Bahirwe on 06/09/2021.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-
+struct EmojiMemoryGameView: View {
+    
     @ObservedObject var  gameViewModel: EmojiMemoryGame
     @State private var emojiCount = 4
     
@@ -30,7 +30,7 @@ struct ContentView: View {
                     }
                 }
             }
-
+            
             Spacer()
             HStack {
                 removeButton
@@ -81,11 +81,12 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+struct EmojiMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGame()
-        ContentView(gameViewModel: game)
+        EmojiMemoryGameView(gameViewModel: game)
             .preferredColorScheme(.dark)
+        
     }
 }
-
