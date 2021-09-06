@@ -12,7 +12,7 @@ struct CardView: View {
         self.card = card
     }
     
-    let card: EmojiMemoryGame.Card
+    private let card: EmojiMemoryGame.Card
     
     private var rectangleShape: RoundedRectangle {
         RoundedRectangle(cornerRadius: 20)

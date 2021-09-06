@@ -125,9 +125,9 @@
 			children = (
 				8206F37926DE8C9900034152 /* MemeberWiseApp.swift */,
 				824B3D5026E66963000EE3AE /* EmojiMemoryGameView.swift */,
+				82EC5A2826E0B0B200312DD6 /* Views */,
 				82EC5A7426E0BA3400312DD6 /* ViewModels */,
 				82EC5A2926E0B0B700312DD6 /* Models */,
-				82EC5A2826E0B0B200312DD6 /* Views */,
 				8206F3A626DF40BA00034152 /* Extensions */,
 				82EC5A4926E0B3AD00312DD6 /* Fonts */,
 				8206F37D26DE8C9A00034152 /* Assets.xcassets */,

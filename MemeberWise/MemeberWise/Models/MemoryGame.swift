@@ -16,7 +16,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     init(numberOfPairsOfCards: Int,
          createCardContent: (Int) -> CardContent) {
         
-        cards = Array<Card>()
+        cards = []
         
         // Create pairs of card
         for pairIndex in 0..<numberOfPairsOfCards {
