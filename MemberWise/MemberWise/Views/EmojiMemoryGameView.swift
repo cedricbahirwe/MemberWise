@@ -12,7 +12,7 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
     @State private var emojiCount = 4
     
-    private let columns =  [GridItem(.adaptive(minimum: 70))]
+    
     var body: some View {
         VStack {
             Text("MemberWise")
@@ -20,8 +20,9 @@ struct EmojiMemoryGameView: View {
             
             AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
                 CardView(for: card)
-                    .aspectRatio(2/3,contentMode: .fit)
+                    .padding(4)
                     .onTapGesture {
+                        print("Dead")
                         makeSelectionSound()
                         game.choose(card)
                     }

@@ -10,10 +10,10 @@ import Foundation
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
     
-    private static let emojis = ["🚂", "🚀", "🚁", "🚜", "🛺", "🚲", "🚐", "🛵", "🚘", "🛻", "🏎️", "🚙"]
+    private static let emojis = ["🚂", "🚀", "🚁", "🚜", "🛺", "🚲", "🚐", "🛵", "🚘", "🛻", "🏎️", "🚙", "🚐", "🛵", "🚘", "🛻", "🏎️", "🚙",]
     
     private static func createMemoryGame() ->  MemoryGame<String> {
-        MemoryGame(numberOfPairsOfCards: 4) { emojis[$0] }
+        MemoryGame(numberOfPairsOfCards: 5) { emojis[$0] }
     }
     
     @Published private var model: MemoryGame<String> = createMemoryGame()
