@@ -1,13 +1,13 @@
 //
-//  MemeberWiseUITests.swift
-//  MemeberWiseUITests
+//  MemberWiseUITests.swift
+//  MemberWiseUITests
 //
-//  Created by Cédric Bahirwe on 31/08/2021.
+//  Created by Cédric Bahirwe on 08/09/2021.
 //
 
 import XCTest
 
-class MemeberWiseUITests: XCTestCase {
+class MemberWiseUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

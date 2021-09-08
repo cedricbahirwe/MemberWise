@@ -1,12 +1,11 @@
 //
 //  EmojiMemoryGame.swift
-//  MemeberWise
+//  MemberWise
 //
-//  Created by Cédric Bahirwe on 02/09/2021.
+//  Created by Cédric Bahirwe on 08/09/2021.
 //
 
-import SwiftUI
-
+import Foundation
 
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
@@ -21,7 +20,7 @@ class EmojiMemoryGame: ObservableObject {
     
     var cards: [Card] {
         model.cards
-    } 
+    }
     
     
    // MARK: - User Intents

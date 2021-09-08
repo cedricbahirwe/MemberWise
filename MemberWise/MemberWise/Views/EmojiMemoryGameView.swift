@@ -1,8 +1,8 @@
 //
 //  EmojiMemoryGameView.swift
-//  MemeberWise
+//  MemberWise
 //
-//  Created by Cédric Bahirwe on 06/09/2021.
+//  Created by Cédric Bahirwe on 08/09/2021.
 //
 
 import SwiftUI

@@ -1,8 +1,8 @@
 //
 //  MemoryGame.swift
-//  MemeberWise
+//  MemberWise
 //
-//  Created by Cédric Bahirwe on 02/09/2021.
+//  Created by Cédric Bahirwe on 08/09/2021.
 //
 
 import Foundation
