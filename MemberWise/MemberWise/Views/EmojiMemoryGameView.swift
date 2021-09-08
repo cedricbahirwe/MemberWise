@@ -22,7 +22,6 @@ struct EmojiMemoryGameView: View {
                 CardView(for: card)
                     .padding(4)
                     .onTapGesture {
-                        print("Dead")
                         makeSelectionSound()
                         game.choose(card)
                     }

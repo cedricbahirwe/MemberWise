@@ -27,6 +27,9 @@ struct CardView: View {
                     rectangleShape
                         .strokeBorder(lineWidth: DrawingConstants.linewidth)
                     
+                    PieShape(startAngle: .degrees(-90), endAngle: .degrees(110-90))
+                        .padding(5).opacity(0.9)
+                    
                     Text(card.content)
                         .font(font(in: geometry.size))
                 } else {
@@ -39,7 +42,7 @@ struct CardView: View {
     private enum DrawingConstants {
         static let cornerRadius: CGFloat  = 10
         static let linewidth: CGFloat = 3
-        static let fontScale: CGFloat = 0.75
+        static let fontScale: CGFloat = 0.6
     }
     
     private func font(in size: CGSize) -> Font {

@@ -28,6 +28,7 @@
 		822B4EB926E9039000DECDB7 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B4EB826E9039000DECDB7 /* EmojiMemoryGame.swift */; };
 		822B4EBB26E903BF00DECDB7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B4EBA26E903BF00DECDB7 /* CardView.swift */; };
 		822B4EBD26E91A6800DECDB7 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */; };
+		827B0B3526E9310C0030D40C /* PieShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B0B3426E9310C0030D40C /* PieShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		822B4EB826E9039000DECDB7 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		822B4EBA26E903BF00DECDB7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		827B0B3426E9310C0030D40C /* PieShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				822B4EB526E9036500DECDB7 /* EmojiMemoryGameView.swift */,
 				822B4EBA26E903BF00DECDB7 /* CardView.swift */,
 				822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */,
+				827B0B3426E9310C0030D40C /* PieShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				822B4EBB26E903BF00DECDB7 /* CardView.swift in Sources */,
 				822B4EAD26E902B700DECDB7 /* CustomFonts.swift in Sources */,
 				822B4EB326E9031A00DECDB7 /* MemoryGame.swift in Sources */,
+				827B0B3526E9310C0030D40C /* PieShape.swift in Sources */,
 				822B4EB626E9036500DECDB7 /* EmojiMemoryGameView.swift in Sources */,
 				822B4EB026E902F200DECDB7 /* View+Extensions.swift in Sources */,
 				822B4E6F26E9024B00DECDB7 /* MemberWiseApp.swift in Sources */,
