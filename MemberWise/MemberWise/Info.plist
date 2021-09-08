@@ -46,5 +46,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ProximaNova-Thin.otf</string>
+		<string>ProximaNova-Alt-Thin.otf</string>
+		<string>ProximaNova-Semibold.otf</string>
+		<string>ProximaNova-Alt-Bold.otf</string>
+		<string>ProximaNova-Extrabold.otf</string>
+		<string>ProximaNova-Regular.otf</string>
+		<string>ProximaNova-Alt-Light.otf</string>
+		<string>ProximaNova-Black.otf</string>
+		<string>Proxima Nova Black.otf</string>
+	</array>
 </dict>
 </plist>
