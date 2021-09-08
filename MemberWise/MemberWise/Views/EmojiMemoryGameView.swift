@@ -19,7 +19,6 @@ struct EmojiMemoryGameView: View {
                 .font(.proxima(.black, 40))
             
             AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
-                
                 CardView(for: card)
                     .aspectRatio(2/3,contentMode: .fit)
                     .onTapGesture {
@@ -27,18 +26,6 @@ struct EmojiMemoryGameView: View {
                         game.choose(card)
                     }
             }
-//            ScrollView {
-//                LazyVGrid(columns: columns) {
-//                    ForEach(game.cards) { card in
-//                        CardView(for: card)
-//                            .aspectRatio(2/3,contentMode: .fit)
-//                            .onTapGesture {
-//                                makeSelectionSound()
-//                                game.choose(card)
-//                            }
-//                    }
-//                }
-//            }
             
             Spacer()
             HStack {

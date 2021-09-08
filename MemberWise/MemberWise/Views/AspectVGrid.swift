@@ -7,29 +7,20 @@
 
 import SwiftUI
 
-struct AspectVGrid<Item, Content>: View where Content: View {
-    internal init(items: [Item],
-                  aspectRatio: CGFloat,
-                  @ViewBuilder content: @escaping (Item) -> Content) {
-        self.items = items
-        self.aspectRatio = aspectRatio
-        self.content = content
-    }
-    
-    
+struct AspectVGrid<Item, ItemView>: View
+where Item: Identifiable, ItemView: View { 
     var items: [Item]
     var aspectRatio: CGFloat
-    var content: (Item) -> Content
+    var content: (Item) -> ItemView
     
     var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct AspectVGrid_Previews: PreviewProvider {
-    static var previews: some View {
-        AspectVGrid(items: [], aspectRatio: 2/3) { card in
-            VStack { }
+        
+        let width: CGFloat = 100
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: width))]) {
+            ForEach(items) { item in
+                content(item)
+                    .aspectRatio(aspectRatio,contentMode: .fit)
+            }
         }
     }
 }
