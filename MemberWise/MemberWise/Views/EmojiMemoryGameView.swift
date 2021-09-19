@@ -12,23 +12,19 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
     @State private var emojiCount = 4
     
-    private let columns =  [GridItem(.adaptive(minimum: 70))]
+    
     var body: some View {
         VStack {
             Text("MemberWise")
                 .font(.proxima(.black, 40))
             
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(game.cards) { card in
-                        CardView(for: card)
-                            .aspectRatio(2/3,contentMode: .fit)
-                            .onTapGesture {
-                                makeSelectionSound()
-                                game.choose(card)
-                            }
+            AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+                CardView(for: card)
+                    .padding(4)
+                    .onTapGesture {
+                        makeSelectionSound()
+                        game.choose(card)
                     }
-                }
             }
             
             Spacer()
