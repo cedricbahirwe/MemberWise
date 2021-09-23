@@ -14,34 +14,24 @@ struct CardView: View {
     
     private let card: EmojiMemoryGame.Card
     
-    private var rectangleShape: RoundedRectangle {
-        RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
-    }
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                if card.isFaceUp {
-                    rectangleShape
-                        .fill()
-                        .foregroundColor(Color(.systemBackground))
-                    rectangleShape
-                        .strokeBorder(lineWidth: DrawingConstants.linewidth)
-                    
-                    PieShape(startAngle: .degrees(-90), endAngle: .degrees(110-90))
-                        .padding(5).opacity(0.9)
-                    
-                    Text(card.content)
-                        .font(font(in: geometry.size))
-                } else {
-                    rectangleShape.opacity(card.isMatched ? 0 : 0.9)
-                }
+                PieShape(startAngle: .degrees(-90), endAngle: .degrees(110-90))
+                    .padding(5).opacity(0.75)
+                
+                Text(card.content)
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                    .animation(.linear(duration: 2).repeatForever(autoreverses: false))
+                    .font(font(in: geometry.size))
+                    .animation(nil)
+
             }
+            .modifier(Cardify(isFaceUp: card.isFaceUp))
         }
     }
-    
+     
     private enum DrawingConstants {
-        static let cornerRadius: CGFloat  = 10
-        static let linewidth: CGFloat = 3
         static let fontScale: CGFloat = 0.6
     }
     

@@ -29,6 +29,7 @@
 		822B4EBB26E903BF00DECDB7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B4EBA26E903BF00DECDB7 /* CardView.swift */; };
 		822B4EBD26E91A6800DECDB7 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */; };
 		827B0B3526E9310C0030D40C /* PieShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B0B3426E9310C0030D40C /* PieShape.swift */; };
+		82FAB97E26FCB2630043D7F0 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAB97D26FCB2630043D7F0 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		822B4EBA26E903BF00DECDB7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		827B0B3426E9310C0030D40C /* PieShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieShape.swift; sourceTree = "<group>"; };
+		82FAB97D26FCB2630043D7F0 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				822B4EBA26E903BF00DECDB7 /* CardView.swift */,
 				822B4EBC26E91A6800DECDB7 /* AspectVGrid.swift */,
 				827B0B3426E9310C0030D40C /* PieShape.swift */,
+				82FAB97D26FCB2630043D7F0 /* Cardify.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				822B4EB626E9036500DECDB7 /* EmojiMemoryGameView.swift in Sources */,
 				822B4EB026E902F200DECDB7 /* View+Extensions.swift in Sources */,
 				822B4E6F26E9024B00DECDB7 /* MemberWiseApp.swift in Sources */,
+				82FAB97E26FCB2630043D7F0 /* Cardify.swift in Sources */,
 				822B4EB926E9039000DECDB7 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

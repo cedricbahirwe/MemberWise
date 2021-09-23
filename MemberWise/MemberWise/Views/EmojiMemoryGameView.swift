@@ -10,8 +10,8 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     
     @ObservedObject var game: EmojiMemoryGame
-    @State private var emojiCount = 4
     
+    @State private var emojiCount = 4
     
     var body: some View {
         VStack {
@@ -19,12 +19,16 @@ struct EmojiMemoryGameView: View {
                 .font(.proxima(.black, 40))
             
             AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+                if card.isMatched && !card.isFaceUp {
+                    Color.clear
+                } else {
                 CardView(for: card)
                     .padding(4)
                     .onTapGesture {
                         makeSelectionSound()
                         game.choose(card)
                     }
+                }
             }
             
             Spacer()
@@ -82,7 +86,7 @@ struct EmojiMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGame()
         EmojiMemoryGameView(game: game)
-            .preferredColorScheme(.dark)
+//            .preferredColor Scheme(.dark)
         
     }
 }

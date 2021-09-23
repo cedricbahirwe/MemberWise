@@ -33,9 +33,6 @@ struct PieShape: Shape {
                  startAngle: startAngle,
                  endAngle: endAngle,
                  clockwise: !clockwise)
-        
-       
-        
         return p
     }
 }
@@ -44,10 +41,11 @@ struct PieShape: Shape {
 struct P_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            PieShape(startAngle: .degrees(90), endAngle: .degrees(-90))
+            PieShape(startAngle: .degrees(270), endAngle: .degrees(0))
 
         }
         .frame(width: 100, height: 180)
         .background(Color.red)
+        .previewLayout(.fixed(width: 200, height: 200))
     }
 }
