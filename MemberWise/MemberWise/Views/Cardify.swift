@@ -21,11 +21,10 @@ struct Cardify: ViewModifier {
                         .foregroundColor(Color(.systemBackground))
                     rectangleShape
                         .strokeBorder(lineWidth: DrawingConstants.linewidth)
-                    
-                    content
                 } else {
                     rectangleShape.opacity(0.9)
                 }
+                content.opacity(isFaceUp ? 1 : 0)
             }
         }
     }

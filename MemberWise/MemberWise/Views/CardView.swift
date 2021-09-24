@@ -22,17 +22,23 @@ struct CardView: View {
                 
                 Text(card.content)
                     .rotationEffect(.degrees(card.isMatched ? 360 : 0))
-                    .animation(.linear(duration: 2).repeatForever(autoreverses: false))
-                    .font(font(in: geometry.size))
-                    .animation(nil)
-
+                    .animation(.linear(duration: 1).repeatForever(autoreverses: false))
+                    .font(.system(size: DrawingConstants.fontSize))
+                    .scaleEffect(scale(thatFits: geometry.size))
+ 
             }
             .modifier(Cardify(isFaceUp: card.isFaceUp))
         }
     }
+    
+    private func  scale(thatFits size: CGSize) -> CGFloat {
+        
+        min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
+    }
      
     private enum DrawingConstants {
         static let fontScale: CGFloat = 0.6
+        static let fontSize: CGFloat = 32
     }
     
     private func font(in size: CGSize) -> Font {
